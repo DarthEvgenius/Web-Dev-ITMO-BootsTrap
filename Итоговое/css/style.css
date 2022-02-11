@@ -1,0 +1,469 @@
+@font-face {
+    font-family: Roboto-Regular; 
+    src: url(../fonts/Roboto-Regular.ttf); 
+}
+
+@font-face {
+    font-family: Roboto-Medium; 
+    src: url(../fonts/Roboto-Medium.ttf); 
+}
+
+@font-face {
+    font-family: Roboto-Italic; 
+    src: url(../fonts/Roboto-Italic.ttf); 
+}
+
+@font-face {
+    font-family: Philosopher-Regular; 
+    src: url(../fonts/Philosopher-Regular.ttf); 
+}
+
+@font-face {
+    font-family: Philosopher-Bold; 
+    src: url(../fonts/Philosopher-Bold.ttf);
+}
+
+@font-face {
+    font-family: fontawesome-webfont; 
+    src: url(../fonts/fontawesome-webfont.ttf);
+}
+
+
+/* прижимаю футер флексами, столкнулся с тем, что d-flex, fl-direction-column & flex 1-1-auto не работает без w-h-100% для html & body */
+html, body {
+    height:100%;
+    width:100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #eeeeed;
+}
+
+.container {
+	max-width: 950px;
+}
+
+/* ------------------------------------------------------------------------ Шапка и футер. Общее*/
+.header,
+.footer {
+	background-color: #008daa;
+	font-family: Roboto-Regular;
+	color: #eeeeed;
+}
+
+.header__link a,
+.footer__link a {
+	color: #d4d0c8;
+}
+
+.header__link a:hover,
+.footer__link a:hover {
+	color: #eeeeed;
+}
+
+
+/* ------------------------------------------------------------------------------------- Шапка */
+.header {
+	height: 100px;
+	box-shadow: 0 8px 6px -6px gray;
+}
+
+.header__socials li {
+	width: 30px;
+	height: 30px;
+}
+
+/* В блок со ссылками на соцсети, в каждый элемент подгрудаем фоновое лого другого цвета, чем в чтмл, для реализации эффекта при наведении */
+.vk a {	
+	background-image: url(../img/vk-white.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.fb a {
+	background-image: url(../img/fb-white.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.inst a {
+	background: url(../img/inst-white.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.tw a {
+	background: url(../img/tw-white.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+/* При наведении применяем прозрачность, и становится виден фон с логотипом другого цвета. Можно было при наведении переназначить путь к картинке, но судя по всему, могут быть сложности с подзагрузкой в момент наведения, и лучше сразу загрузить обе картинки */
+.vk img:hover {
+	opacity: 0;
+}
+
+.fb img:hover {
+	opacity: 0;
+}
+
+.inst img:hover {
+	opacity: 0;
+}
+
+.tw img:hover {
+	opacity: 0;
+}
+
+/* --------------------------------------------------------------------- Основная часть. Общее */
+
+/* Раздвигаем основную часть на всю доступную ширину, и прижимаем футер */
+.content {
+	flex: 1 1 auto;
+}
+
+.content-height {
+	height: 980px;
+}
+
+.content__title {
+	font-family: Philosopher-Bold;
+	text-transform: uppercase;
+	color: #005c7d;
+	text-align: center;
+	padding-top: 110px;
+	padding-bottom: 80px;
+}
+
+/* ------------------------------------------------------------------------ Основная часть. Intro */
+.intro {
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: 873px;
+	background-position: 0 175px;
+}
+
+.circle {
+	color: #06bac5;
+	font-size: 6.5px;
+	vertical-align: 35%;	
+}
+
+.intro__menu {
+margin-bottom: 70px;
+}
+
+/* разделители в итоге сделал с помощью псевдоэлементов, хотя сначала сделал через вставку svg-круга. Так, думаю, правильнее */
+.intro__menu li:not(:last-child):after {
+	content: '';
+	display: inline-block;
+	position: relative;
+	bottom: 3px;
+	left: 17px;
+	height: 6.5px;
+	width: 6.5px;
+	border-radius: 50%;
+	background-color: #06bac5;
+}
+
+.intro__menu a {
+	color: #06bac5;
+	text-decoration: none;
+	font-family: Roboto-Regular;
+	text-transform: uppercase;
+}
+
+.intro__menu a:hover {
+	color: #eb447b;
+}
+
+.intro__heading {
+	color: #005c7d;
+}
+
+.intro__heading h1 {
+	font-family: Philosopher-Regular;
+	line-height: 90px;
+	margin-bottom: 75px;
+}
+
+.intro__heading p {
+	font-family: Roboto-Medium;
+	margin-bottom: 55px;
+	font-size: 18px;
+}
+
+.intro__heading button {
+	background-color: #005c7d;
+	border-radius: 100px;
+}
+
+.intro__heading button:hover {
+	background-color: #eb447b;
+}
+
+.intro__heading button a {
+	color: #eeeeed;
+	font-family: Roboto-Regular;
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+
+
+/* -------------------------------------------------------------- Основная часть. Description */
+.description__text {
+	margin-bottom: 70px;
+}
+
+.description__text p {
+	font-family: Roboto-Regular;
+	color: #005c7d;
+	font-size: 18px;
+	text-align: justify;
+	text-align-last: center;
+}
+
+.description__text p:last-child {
+	word-spacing: 10px;
+}
+
+.description__cards img {
+	margin-bottom: 40px;
+}
+
+.description__cards h3 {
+	font-family: Philosopher-Regular;
+	color: #005c7d;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.description__cards p {
+	color: #06bac5;
+	font-size: 17px;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------ Основная часть. Advantage*/
+.advantage {
+	color: #005c7d;
+}
+
+.advantage li {
+	margin-bottom: 40px;
+	font-family: Roboto-Regular;
+}
+
+/* ----------------------------------------------------------------- Основная часть. Questions */
+.questions h2 {
+	padding-bottom: 50px;
+}
+
+.questions h6 {
+	font-family: Philosopher-Bold;
+	color: #008daa;
+	width: 100%;
+	font-size: 20px;
+}
+
+.questions p,
+.questions a {
+	font-family: Roboto-Italic;
+	color: #008daa;
+	font-size: 18px;
+}
+
+.accordion-item {
+	border: 0;
+}
+
+/* Меняем местами иконку и текст */
+.accordion-button {
+	flex-direction: row-reverse;
+	justify-content: end;
+}
+
+/* Меняем изображение иконки */
+.accordion-button:after {
+	margin-right: auto;
+	margin-left: 0;
+	content: '\f0d7';
+	font-family: fontawesome-webfont;
+	background-image: none;
+	color: #008daa;
+}
+
+/* далее убираем все динамические стили при нажатии/фокусе на элементах аккордеона */
+.accordion-button:not(.collapsed) {
+	background-color: #fff;
+	box-shadow: none;
+	outline: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+	background-image: none;
+	/* заменил transform именно на rotateX, ибо работало не правильно */
+	transform: rotateX(180deg);
+}
+
+.accordion-button:focus {
+	outline: none;
+	border: 0;
+	box-shadow: none;
+}
+
+.questions__ask {
+	font-family: Philosopher-Bold;
+}
+
+.questions__ask h4 {
+	color: #008daa;
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.questions__ask a {
+	color: #005c7d;
+	font-family: Philosopher-Bold;
+	font-size: 26px;
+}
+
+.questions__ask a:hover {
+	color: #eb447b;
+}
+
+/* ------------------------------------------------------------------Основная часть. Reviews */
+
+.reviews__card {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.reviews p {
+	font-family: Roboto-Italic;
+	color: #005c7d;
+	text-align: justify;
+}
+
+.reviews__card-image img {
+	border-radius: 50%;
+	object-fit: cover;
+	max-width: 170px;
+}
+
+.reviews__card-name {
+	font-family: Philosopher-Regular;
+	color: #008daa;
+}
+
+/* Стилизуем иконки прокрутки, ищем их тоже через панель разработчика */
+.carousel-control-prev-icon {
+	background-image: url(../img/left.png);
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+}
+
+.carousel-control-next-icon {
+	background-image: url(../img/right.png);
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+}
+
+.carousel-control-prev {
+	justify-content: start;
+	align-items: flex-start;
+	padding-top: 90px;
+}
+
+.carousel-control-next {
+	justify-content: end;
+	align-items: flex-start;
+	padding-top: 90px;
+}
+
+/* ----------------------------------------------------------------- Основная часть. Contacts*/
+.contacts {
+	height: 700px;
+	font-family: Roboto-Medium;
+	color: #005c7d;	
+}
+
+.arrow {
+	position: relative;
+	bottom: 19px;
+}
+
+.contacts a {
+	color: #005c7d;
+}
+
+.contacts a:hover {
+	color: #eb447b;
+}
+
+.contacts__socials li {
+	width: 50px;
+	height: 50px;
+	/*margin-right: 50px;*/
+}
+
+
+/* В блок со ссылками на соцсети, в каждый элемент подгрудаем фоновое лого другого цвета, чем в чтмл, для реализации эффекта при наведении */
+.vk a {	
+	background-image: url(../img/vk-pink.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.fb a {
+	background-image: url(../img/fb-pink.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.inst a {
+	background: url(../img/inst-pink.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.tw a {
+	background: url(../img/tw-pink.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+/* При наведении применяем прозрачность, и становится виден фон с логотипом другого цвета. Можно было при наведении переназначить путь к картинке, но судя по всему, могут быть сложности с подзагрузкой в момент наведения, и лучше сразу загрузить обе картинки */
+.vk img:hover {
+	opacity: 0;
+}
+
+.fb img:hover {
+	opacity: 0;
+}
+
+.inst img:hover {
+	opacity: 0;
+}
+
+.tw img:hover {
+	opacity: 0;
+}
+
+/* ------------------------------------------------------------------------------- Футер */
+.footer {
+	height: 175px;
+}

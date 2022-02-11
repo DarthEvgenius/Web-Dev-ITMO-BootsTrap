@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+
+<!-- Шапка сайта -->
+		<div class="header d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<!-- В шапке два блока - ссылка на сайт и список соцсетей -->
+					<div class="header__link col-12 col-md-8"><a class="fs-5" href="#">Перейти на сайт образовательного центра</a></div>
+
+					<ul class="header__socials list-inline col-12 col-md-4 mb-0 d-flex justify-content-end">					
+							<li class="vk list-inline-item">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/vk-gray.png" alt="#">
+								</a>
+							</li>
+							<li class="fb list-inline-item ms-4">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/fb-gray.png" alt="#">
+								</a>
+							</li>
+							<li class="inst list-inline-item  ms-4">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/inst-gray.png" alt="#">
+								</a>
+							</li>
+							<li class="tw list-inline-item  ms-4">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/tw-gray.png" alt="#">
+								</a>
+							</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+<!-- Главный раздел - контент сайта, состоит из 6 секций одинакового размера (content-height): вступление (intro), О курсе (description), Преимущества (advantage), Bопросы (questions), Отзывы (reviews), Связаться с нами (contacts) -->
+		<div class="content">			
+<!-- intro - своего рода вторая шапка, навигация и заголовок сайта -->
+			<div class="intro content-height">
+				<div class="container">
+					<nav class="intro__menu nav justify-content-end mt-3">
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<a href="#description">о курсе</a>
+							</li>					
+							<li class="list-inline-item ms-4">
+								<a href="#">преподаватели</a>
+							</li>
+							<li class="list-inline-item ms-4">
+								<a href="#reviews">отзывы</a>
+							</li>							
+							<li class="list-inline-item ms-4">
+								<a href="#questions">вопросы</a>
+							</li>
+						</ul>						
+					</nav>
+					
+					<div class="intro__heading d-flex flex-column">
+						<h1 class="text-end display-6">Дизайн и вёрстка полиграфической продукции<br>в <span class="text-uppercase">adobe illustrator</span></h1>
+						<p class="text-end">Повышение квалификации, 35 ак. часов</p>
+						<button class="align-self-end btn px-3"><a href="#" class="text-decoration-none">Записaться на курс</a></button>
+					</div>
+				</div>
+			</div>
+
+<!-- description -->
+			<div class="description content-height bg-white" id="description">
+				<div class="container">
+					<h2 class="content__title h1">о курсе</h2>
+					<div class="description__text">
+						<p>На курсе Вы научитесь работать с компьютерной программой Adobe Illustrator, выполняя реальные проекты с первого дня обучения. Понимание теории в основном ппроисходит через практику. Шаг за шагом, в течение обучения, Вы создадите свое портфолио, позволяющее начать работать сразу после окончания курса.</p>
+						<p>Очное обучение проходит по расписанию в вечерние часы (18.30—21.50) 1-2 раза в неделю.<br>Дистанционное обучение — по индивидуальному календарному плану.</p>
+					</div>
+
+					<div class="row description__cards justify-content-between">
+						<div class="col-4 text-center">
+							<img src="img/diplom.png" alt="diplom" class="img-fluid">
+							<h3>Выдаваемый документ</h3>
+							<p>Удостоверение о повышении квалификации</p>
+						</div>
+						<div class="col-4 text-center">
+							<img src="img/hat.png" alt="hat" class="img-fluid">
+							<h3>Форма обучения</h3>
+							<p>Очная<br>Дистанционная</p>
+						</div>
+						<div class="col-4 text-center">
+							<img src="img/price.png" alt="money" class="img-fluid">
+							<h3>Стоимость обучения</h3>
+							<p>Очная форма: 10 000 р.<br>Дистанционная форма: 7 000 р.<br>Возможность поэтапной оплаты</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<!-- advantage -->
+			<div class="advantage content-height">
+				<div class="container d-flex flex-column">
+					<h2 class="content__title h1">преимущества</h2>
+					<ul class="align-self-center list-unstyled fs-3">
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Обучение в престижном ВУЗе
+						</li>
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Гибкие условия оплаты
+						</li>
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Возможность тестового периода обучения
+						</li>
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Индивидуальный график
+						</li>
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Портфолио по окончанию курса
+						</li>
+						<li>
+							<i class="bi bi-check-circle me-4 fs-4"></i>Практикующие преподаватели
+						</li>
+					</ul>
+				</div>
+			</div>
+
+<!-- questions -->
+			<div class="questions content-height bg-white" id="questions">
+				<div class="container">
+					<h2 class="content__title h1">вопросы</h2>
+
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+						    <h3 class="accordion-header" id="headingOne">
+						      	<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						        	<h6>Могу ли я оплатить не всю сумму сразу, а платить в течение всего срока обучения? И как происходит оплата?</h6>
+						      </button>
+						    </h3>
+						    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						      	<div class="accordion-body">
+						        	<p>
+						        		Да, конечно! У нас предусмотрена поэтапная оплата обучения. Вы можете разбить сумму на 2-8 частей. График платежей будет указан при заключении договора. Стоимость курса при этом остаётся постоянной на весь срок обучения. Реквизиты счёта будут указаны в договоре на обучение.
+						        	</p>
+						      	</div>
+						    </div>
+						</div>
+						<div class="accordion-item">
+						   	<h3 class="accordion-header" id="headingTwo">
+						      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						      		<h6>
+						      			Отличается ли диплом при прохождении курса в очной форме и в режиме экстерната?
+						      		</h6>
+						      	</button>
+						    </h3>
+						    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						    	<div class="accordion-body">
+						        	<p>
+						        		Нет, дипломы не отличаются на основании приказа Министерства образования и науки Российской Федерации от 9 января 2014 г. N 2 г. Москва "Об утверждении Порядка применения организациями, осуществляющими образовательную деятельность, электронного обучения, дистанционных образовательных технологий при реализации образовательных программ". Посмотреть, как выглядит диплом, можно перейдя по <a href="https://design.ifmo.ru/diploms/?is_page=prof_new">ссылке</a>.
+						        	</p>
+						    	</div>
+						    </div>
+						</div>
+						<div class="accordion-item">
+						    <h3 class="accordion-header" id="headingThree">
+						      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						        	<h6>
+						        		Когда начинается дистанционное обучение?
+						        	</h6>
+						      	</button>
+						    </h3>
+						    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						      	<div class="accordion-body">
+						        	<p>
+						        		Дистанционное обучение по любому курсу является индивидуальным &ndash; вы и преподаватель. Поэтому начать обучение можно в люблое удобное для Вас время! Вас подключат к системе дистанционного обучения сразу после заключения договора и оплаты первого этапа. Возможно предоставление тестового доступа.
+						        	</p>
+						      	</div>
+    						</div>
+  						</div>
+					</div>
+
+					<div class="questions__ask">
+						<h4 class="text-center h3">Не нашли ответа на свой вопрос?</h4>
+						<p class="text-center">
+							<a href="#">Спросить здесь</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+<!-- reviews -->
+			<div class="reviews content-height" id="reviews">
+				<div class="container">
+					<h2 class="content__title h1">отзывы</h2>
+
+					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						    <div class="carousel-item active">
+						      	<div class="reviews__card">
+									<p>«Будучи мамой двух детей, я выбрала дистанционную форму обучения по курсу «Дизайн и верстка полиграфической продукции» и училась ежедневно, пока дети были в школе. Обучение заняло у меня чуть больше 6 месяцев. Очень понравилась практическая направленность обучения – ты с первого дня творишь!Сначала простые объекты, а потом целые брендбуки. Здорово, что есть видео-поддержка одного из самых сложных курсов – CorelDraw. Очень благодарна Александру Викторовичу за оперативность, справедливую критику и очень полезные советы. Я считаю его своим наставником и даже закончив курс, иногда прошу его оценить мои работы, но уже не учебные, а настоящие. Меня очень увлек фриланс. Он позволяет совмещать работу и семейные хлопоты, позволяет развиваться и самореализоваться. Одним словом – СПАСИБО!»</p>
+									<div class="reviews__card-image text-center">
+										<img src="img/voroncova.jpg" alt="" class="img-fluid">
+									</div>
+									<h4 class="reviews__card-name text-center mt-4">Ольга Воронцова<br>выпуск 2015</h4>
+								</div>
+						    </div>
+
+						    <div class="carousel-item">
+						     	<div class="reviews__card">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam facere corporis nobis repellendus dicta amet fugiat magni quam voluptas, modi est aperiam blanditiis itaque dolore ipsum non dolorum nihil quae ab, perferendis id deleniti aut illum labore! Dolor porro pariatur eligendi eius, recusandae enim vitae doloremque ratione. A non id esse dicta, odit labore voluptatem minus perspiciatis voluptate distinctio error ducimus cumque hic quis facilis accusantium, nam? Laborum, dolores.</p>
+									<div class="reviews__card-image text-center">
+										<img src="img/arrow-310634_1280.png" alt="" class="img-fluid">
+									</div>
+									<h4 class="reviews__card-name text-center mt-4">Arrow whooops<br>2015</h4>
+								</div>
+						    </div>
+						    <div class="carousel-item">
+						     	<div class="reviews__card">
+									<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Temporibus expedita, eligendi iusto quisquam nesciunt maxime ipsa, officia quae molestiae sit earum qui cum minus perferendis recusandae eveniet error dolores laudantium quibusdam repellat amet rem perspiciatis harum adipisci. Asperiores veritatis nobis nulla quos dolor fugit nemo facilis, placeat nam minima, vel consequuntur possimus ea atque, fugiat iste ad at libero labore ratione velit. Magnam eveniet molestias quae aliquam aut dicta alias minima, qui ipsa omnis optio, magni animi laudantium. Ratione odio quod assumenda ab, repudiandae quam omnis maxime voluptatibus, facilis eveniet, voluptate. Veniam magni, quibusdam reprehenderit tempora vel laudantium consequatur ullam?</p>
+									<div class="reviews__card-image text-center">
+										<img src="img/rabbit.jpg" alt="" class="img-fluid">
+									</div>
+									<h4 class="reviews__card-name text-center mt-4">Rabbit Roger<br>выпуск 1988</h4>
+								</div>
+						    </div>
+
+						</div>
+						  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						    	<span class="visually-hidden">Previous</span>
+						  	</button>
+						  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						    	<span class="visually-hidden">Next</span>
+						  	</button>
+						</div>
+									
+				</div>
+			</div>
+<!-- contacts -->
+			<div class="contacts content-height bg-white">
+				<div class="container">
+					<h2 class="content__title h1">связаться с нами</h2>
+
+					<div class="row contacts__goto mb-5">
+						<div class="col-5 text-center fs-5">Образовательный центр</div>
+						<div class="col-2 text-center arrow">
+							<img src="img/arrow-310634_1280.png" alt="arrow" class="img-fluid">
+						</div>
+						<div class="col-5 text-center fs-5">
+							<a href="#">Перейти на основной сайт</a>
+						</div>
+					</div>
+
+					<h4 class="text-center mb-5">Мы в соц. сетях:</h4>
+
+					<ul class="contacts__socials list-inline d-flex justify-content-center">					
+							<li class="vk list-inline-item me-5">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/vk-blue.png" alt="#">
+								</a>
+							</li>
+							<li class="fb list-inline-item me-5">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/fb-blue.png" alt="#">
+								</a>
+							</li>
+							<li class="inst list-inline-item me-5">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/inst-blue.png" alt="#">
+								</a>
+							</li>
+							<li class="tw list-inline-item">
+								<a class="d-inline-block" href="#">
+									<img class="img-fluid" src="img/tw-blue.png" alt="#">
+								</a>
+							</li>						
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+<!-- Футер сайта -->
+		<div class="footer p-2 fs-5">
+			<div class="container">
+				<p>&copy; 2018 Образователный центр</p>
+				<p>Любое использование материалов допускается только при соблюдении правил перепечатки и при наличии гиперссылки</p>
+				<div class="footer__link">
+					<a href="#">Политика организации в отношении обработки персональных данных</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
